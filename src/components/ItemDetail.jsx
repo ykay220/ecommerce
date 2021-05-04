@@ -11,7 +11,30 @@ function ItemDetail(props) {
 
 
     const handler = () => {
-        
+        let flag = false;
+        cart.map(eachitem=>{
+            if(eachitem.id === cardObject.id){
+                flag=true;
+                console.log('already exists')
+            }
+        })
+
+        if(flag === true){
+            console.log('already exists- increase qty of card object')
+            // let cartCopy = cart.map(elcart=>{
+            //     if(elcart.id === cardObject.id){
+            //         let newquantity = elcart.qty + 1
+            //         console.log(newquantity)
+            //         return {...elcart, qty: newquantity}
+            //     }
+            //     else{
+            //         return elcart;
+            //     }
+                
+            // });
+            updateCart(cart)
+        } else{
+            console.log('updatecard was triggered')
             updateCart(
                     
                 [
@@ -19,6 +42,8 @@ function ItemDetail(props) {
                 ...cart, { name: cardObject.name, price: cardObject.price, id: cardObject.id, image: cardObject.image, qty: 1}
             ])
         
+        }
+           
       
                 
  }

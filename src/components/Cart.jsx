@@ -8,6 +8,7 @@ function Cart(props) {
     const [newCart, setNewCart] = useState(cart)
    
     const updateQty = (id,newQty) => {
+        
         const newCarts = newCart.map(elcarts =>{
             if (elcarts.id === id){
                 return {...elcarts, qty: newQty}
