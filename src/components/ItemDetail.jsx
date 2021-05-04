@@ -1,15 +1,21 @@
 
 import { useParams} from 'react-router-dom';
+import { useState} from 'react';
 import cardinfo from  './data/cardinfo.json'
+import { BsCheckCircle } from "react-icons/bs";
+import { motion } from "framer-motion";
+
 import { AiOutlineRetweet, AiOutlineHeart } from "react-icons/ai";
 function ItemDetail(props) {
     const { updateCart, cart} = props;
     const { id } = useParams();
-    
+    const [isOpen, setisOpen] = useState(false)  
   
     const cardObject = cardinfo.find( card =>  card.id == id);
 
-
+const toggleModal = () => {
+    setisOpen(!isOpen)
+}
     const handler = () => {
         let flag = false;
         cart.map(eachitem=>{
@@ -31,15 +37,15 @@ function ItemDetail(props) {
         
                 ...cart, { name: cardObject.name, price: cardObject.price, id: cardObject.id, image: cardObject.image, qty: 1}
             ])
-        
+            toggleModal();
         }
-           
+        
       
                 
  }
 
 
-    // console.log(cart)
+    console.log(isOpen)
   
 return (
     <div className="itemdetail_main">
@@ -58,6 +64,21 @@ return (
                 <AiOutlineRetweet className="dicons"/>
                 <AiOutlineHeart className="dicons"/>
                 </div>
+                {isOpen ?(
+                    <motion.div
+                    initial={{
+                        y:-3
+                    }}
+
+                    animate={{
+                        x:0,
+                        y:.3,
+                        scale:1
+                    }}
+                     className="modal">
+                        <BsCheckCircle className="check-icon"/>
+                    </motion.div>
+                ) : null}
         </div>
        
         
