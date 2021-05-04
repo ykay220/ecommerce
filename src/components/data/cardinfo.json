@@ -1,0 +1,54 @@
+   
+  
+   [
+    {
+        "id":1,
+        "name": "Lamborghini Veneno" ,
+        "price": 4300000,
+        "desc": "The Lambo has been created to anticipate the future, as demonstrated by the use of innovative technology, including a V12 engine and the extensive use of carbon fiber.",
+        "image" :"/images/Lambo.jpg",
+        "discount" : 6400000
+    },
+    {
+        "id":2,
+        "name": "Audi A8" ,
+        "price": 180000,
+        "desc": "Audi's are good cars, they are a sporty luxury brand with a full model lineup. They score highly for innovation, design and build quality. However, Audi's image has suffered from the VW diesel gate scandal and some of their gas powered engines suffer from serious design flaws.",
+        "image" :"/images/Audi.jpg",
+        "discount" : 200000
+    },
+    {
+        "id":3,
+        "name": "Porsche 918 Spyder" ,
+        "price": 230000,
+        "desc": "Now, getting down exclusively to owning new Porsche, yes it is worth it. Not only is it the most powerful Porsche ever made yet (in the 911 and 718 line, excluding the carrera gt) but it has top-of-the-line tech inside and outside the engine. ... The last bit of convincing someone to get a Porsche is to look at the future.",
+        "image" :"/images/Porsche.jpg",
+        "discount" : 4400000
+    },
+    {
+        "id":4,
+        "name": " Mercedes-AMG GT 63 S" ,
+        "price": 330000,
+        "desc": "As part of Mercedes's EQ subbrand, the EQA is an all-electric subcompact luxury crossover that's based on the GLA-class and possibly slated for sale in the U.S.",
+        "image" :"/images/Mercedes.jpg",
+        "discount" : 530000
+    },
+    {
+        "id":5,
+        "name": "Kawasaki Ninja 400" ,
+        "price": 80000,
+        "desc": "What better way to spend the first day of May than riding a motorcycle? And this weekend marks something a little special, the return of International Female Ride Day to its regularly scheduled slot at the beginning of spring.",
+        "image" :"/images/Motorcycle.jpg",
+        "discount" : 900000
+    },
+    {
+        "id":6,
+        "name": "Bugatti Divo" ,
+        "price": 2300000,
+        "desc": "Automobiles Ettore Bugatti was a French car manufacturer of high-performance automobiles, founded in 1909 in the then-German city of Molsheim, Alsace by the Italian-born industrial designer Ettore Bugatti. The cars were known for their design beauty and for their many race victories.",
+        "image" :"/images/Bugatti.jpg",
+        "discount" : 8800000
+    }
+
+]
+
