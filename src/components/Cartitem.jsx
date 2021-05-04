@@ -2,7 +2,7 @@ import React from 'react'
 import ItemDetail from './ItemDetail';
 
 function Cartitem(props) {
-    const {eachcart, updateQty} = props;
+    const {eachcart, updateQty, setNewCart, newCart} = props;
   
     const subtractHandler = () => {
         updateQty(id, qty - 1)
@@ -15,6 +15,9 @@ function Cartitem(props) {
   
     const {id, name, image, price, qty} = eachcart
 
+    const removeHandler=()=>{
+        setNewCart(newCart.filter((cart)=> cart.id !== id))
+    }
     // console.log(updateQty)
 
     
@@ -27,7 +30,7 @@ function Cartitem(props) {
             <div className="card-content">
                 <div className="content-p">
                     <p>{name}</p>
-                    {/* <p onClick={removeHandler}>remove</p> */}
+                    <p onClick={removeHandler}>Remove</p>
                 </div> 
                 <div className="content-titles">
                 <div className="button-p">

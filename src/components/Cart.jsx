@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaFilter } from 'react-icons/fa';
 import Cartitem from './Cartitem';
 
 
@@ -18,6 +19,7 @@ function Cart(props) {
         setNewCart(newCarts)
     }
 
+  
 
     const grandTotal = newCart.reduce((total, elcart) =>(
         total + elcart.qty * elcart.price
@@ -44,7 +46,7 @@ function Cart(props) {
                     
                     <div className="middle-div">
                         {newCart.map(eachcart=>
-                            <Cartitem updateQty={updateQty}newCart={newCart }key={eachcart.id}eachcart={eachcart}/>
+                            <Cartitem setNewCart={setNewCart}updateQty={updateQty}newCart={newCart }key={eachcart.id}eachcart={eachcart}/>
                          )}
                          </div>
                    
